@@ -49,4 +49,10 @@ public class EntryServiceImpl implements EntryService{
     public List<Entry> getAllEntries() {
         return entryRepository.findAll();
     }
+
+    @Override
+    public Entry findById(String id) {
+        return entryRepository.findById(id).orElseThrow(
+                () -> new EntryException("Invalid ID"));
+    }
 }
