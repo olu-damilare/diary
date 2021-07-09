@@ -12,4 +12,5 @@ public interface EntryService {
     void deleteEntry(String id);
     Entry updateEntry(String id, Entry entry);
     List<Entry> getAllEntries();
+    Entry findById(String id);
 }
